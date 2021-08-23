@@ -24,6 +24,7 @@ e informe o resultado usando document.write().
 let num1 = Number(prompt('Digite o primeiro número:'))
         let num2 = parseFloat(prompt('Digite o segundo número:'))
         let oper = prompt('Digite a Operação(+ - X x / :):')
+        let resultado
 
         // validação dos numeros
 
@@ -35,22 +36,22 @@ let num1 = Number(prompt('Digite o primeiro número:'))
         else{
             switch(oper){
                 case '+':
-                document.write(num1 + num2)
+                resultado = num1 + num2
                 break
 
                 case '-':
-                document.write(num1 - num2)
+                resultado = num1 - num2
                 break
 
-                case'*':
-                case'X':
+                case'*': // case vazio
+                case'X': // case vazio
                 case'x':
-                document.write(num1 * num2)
+                resultado = num1 * num2
                 break
 
                 case '/': // case vazio
                 case ':':
-                    document.write(num1 / num2)
+                resultado =num1 / num2
                     break
                 
 
@@ -60,11 +61,17 @@ let num1 = Number(prompt('Digite o primeiro número:'))
             }
         }
 
-    
+        document.write(num1 + ' ' + oper + ' ' + num2 + '  é igual a ' + resultado)
 
-
-
- 
+        // usando string templates
+        // string tmplates sao string delimitadas por (acento agudo crase)
+        //  que aceitam, dentro delas, a inteerpolação de variaveis usando o código
+        // ${}
+        //document.write(`$ {num1} $ {oper} $ {num2} é igual a {resultado}`)
+        if ( resultado !== undefined){
+            document.write(`${num1} ${oper} ${num2} é igual a ${resultado}`)
+        }
+        
 
         /*
         else if (oper === '+') {
