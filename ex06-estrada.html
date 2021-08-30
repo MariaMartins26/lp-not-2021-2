@@ -21,24 +21,23 @@
 
         let comprimento
 
-        do{
-            comprimento = parseInt(prompt('Comprimento da rodovia (>200:'))
-        }while (isNaN(comprimento) || comprimento <=200)
+    do {
+    comprimento = parseInt(prompt('Comprimento da rodovia (> 200):'))
+    } while(isNaN(comprimento) || comprimento <= 200)
 
-        let Km = 1
-        while(Km <= comprimento){
-            if(Km % 31 === 0){
-                //document.write(`O Km ${Km} tem pedagio <br>`)
-                document.write('O Km ' + Km + ' tem um pedagio<br>')
-            }
-      
-            if(Km % 23 === 0 {
-                document.write(`O Km ${Km} ten um posto de atendimento ao usuario<br>`)
-            }
+    let km = 1
 
-            Km++ //incrementa o quilometro percorrido
+    while(km <= comprimento) {
+    if(km % 31 === 0) {
+        // document.write(`O km ${km} tem um pedágio<br>`)
+        document.write('O km ' + km + ' tem um pedágio<br>')
+    }
+    if(km % 23 === 0) {
+        document.write(`O km ${km} tem um posto de atendimento ao usuário<br>`)
+    }
+    km++    // Incrementa o quilômetro percorrido
 
-        }
+    }
 
 
 
