@@ -18,7 +18,7 @@
             informe com document.write todos aqueles que têm um pedágio ou um posto
             de atendimento ao usuário da AUTOBURACON S/A.
         */
-
+        /*
         let comprimento
 
     do {
@@ -38,8 +38,22 @@
     km++    // Incrementa o quilômetro percorrido
 
     }
+    */
 
+      // CARACTERISTICA DO LOOP FOR
+        // 1 - quantidade de execuções: determinada ou indeterminavel
+        // 2 - Garantia de execução: 0
+        // 3 - Local da avaliação da condição: no inicio 
 
+    for(let km =1; km <= comprimento; km++){
+        if(km % 31 === 0){
+        // document.write(`O km ${km} tem um pedágio<br>`)
+        document.write('O km ' + km + ' tem um pedágio<br>')
+    }
+    if(km % 23 === 0) {
+        document.write(`O km ${km} tem um posto de atendimento ao usuário<br>`)
+    }   
+}
 
     </script>
 
