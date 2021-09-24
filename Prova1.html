@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 1</title>
+    <script>
+
+    let nasc, ano, dia, resultado
+
+    dia = parseInt(prompt (' Informe um dia:')) 
+    
+    while (dia < 1 || dia > 31) {
+        dia = parseInt(prompt("Número inválido, informe um número valido: "))
+
+    }
+
+    nasc = parseInt(prompt (' Informe um mes:')) 
+    
+    while (nasc < 1 || nasc > 12) {
+        nasc = parseInt(prompt("Número inválido, informe um número valido: "))
+
+    }
+
+    ano = parseInt(prompt ('Informe um ano:')) 
+    
+    while (ano < 1921 && ano > 2021) {
+        ano = parseInt(prompt("Número inválido, informe um número valido: "))
+
+    }
+
+    resultado == ((ano + nasc) * dia) / 4;
+
+    function Hogwarts(ano, nasc, dia, resultado){
+
+        let casa
+
+        switch (resultado) {
+
+            case 0:
+            casa ="Casa Gado Demais" 
+            break;
+
+            case 1:
+            casa = "Casa Galo de Rinha" 
+            break;
+
+            case 2:
+            casa = "Casa Lacraste" 
+            break;
+
+            case 3:
+            casa = "Casa Smilingüido" 
+            break;
+
+        }
+
+        return casa;
+
+
+    }
+        document.write(`o valor é ${resultado(0)}`)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
