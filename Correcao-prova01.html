@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correção Prova</title>
+    <script>
+        /* 2.Peça ao usuário para informar seu dia de nascimento. Valide para que o dia informadoseja um número inteiro válido e esteja na faixa entre 1 e 31. A solicitação deverá serrepetida até que se consiga um dia válido.
+        */
+
+    // Solicita dia de nascimento
+    let diaNasc
+    do{
+        diaNasc = parseInt(prompt('Informe o dia do seu nascimento(1-31):'))
+    }while(isNaN(diaNasc) || diaNasc <1 || diaNasc >31)
+
+    /*
+    3.Solicite ao usuário que informe o mês do seu nascimento. Valide para que o mêsinformado seja um número inteiro válido e esteja entre 1 e 12. Repita a solicitaçãoenquanto não obtiver um mês válido.
+
+    */
+    
+    // Solicita mes de nascimento
+    let mesNasc
+    do{
+        mesNasc = parseInt(prompt('Informe o mês do seu nascimento (1-12):'))
+    } while (isNaN(mesNasc)|| mesNasc<1 || mesNasc >12)
+
+    /*
+    4.Por fim, peça ao usuário para informar seu ano de nascimento. Além de ser um númerointeiro válido, o ano informado deve estar entre 1921 (inclusive) e 2021 (inclusive).Assim  como nos  casos anteriores, a  pergunta  deverá ser repetida  enquanto  umaresposta válida não for conseguida.
+    */
+
+    // Solicita ao de nascimento
+    do{
+        anoNasc = parseInt(prompt('Informe o ano do seu nascimento(1921-2021):'))
+    }while(isNaN(anoNasc)|| anoNasc <1921 || anoNasc >2021)
+
+    /*
+    5.Declare uma função que receba o dia, o mês e o ano. Dentro dela, some os valores doano e do mês e multiplique o resultado pelo valor do dia. A função deverá retornar oresto do valor obtido no cálculo anterior por 4.
+    */
+    // Efetua calculo da casa de destino utilizando informações do dia
+    // do mes e do ano 
+    function determinarCasa(dia, mes, ano){
+        let calc = (ano + mes) * dia
+        return calc % 4
+    }
+
+    /*
+    6.Efetue   uma   chamada   à   função   declarada   na   etapa   5   e   utilize   uma   estruturaswitch..case para analisar o retorno da função. Informe com document.write() qual acasa a que o usuário pertence, conforme o esquema a seguir:◦Retorno da função igual a 0: Casa Gado Demais◦Retorno da função igual a 1: Casa Galo de Rinha◦Retorno da função igual a 2: Casa Lacraste◦Retorno da função igual a 3: Casa Smilingüido
+    */
+    // Chamada a função que determina a casa de destino
+    let numCasa = determinarCasa(diaNasc, mesNasc, anoNasc)
+        // Processa o retorno da função que determinou a casa de destino
+        // exibir o respectivo nome
+    switch(numCasa) { // ou : switch (determinarCasa(diaNasc, mesNasc, anoNasc)}
+        case 0:
+            document.write('Casa Gado Demais')
+            break
+        case 1:
+            document.write('Casa Galo de Rinha')
+            break
+        case 2:
+            document.write('Casa Lacraste')
+            break
+        default: // case 3:
+
+            document.write('Casa Smilinguido')
+            break
+    }
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

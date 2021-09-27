@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model- DOM </title>
+
+</head>
+<body>
+    <h1>Document Object Model</h1>
+    <ol> 
+        <li>São Paulo</li>
+        <li>Minas Gerais</li>
+        <li>Rio de Janeiro</li>
+        <li>Espirito Santo</li>
+
+    </ol>
+    <script>
+        /* Manipulação do DOM */
+
+        //1 - Capturar o elemento html  e coloca lo dentro de uma variavel java script
+        
+        let titulo1 = document.querySelector('h1')
+        
+        //Alterar o conteudo textual do elemento
+        titulo1.textContent = 'Estados da Região Sudeste'
+
+        // capturar mais um elemento
+        let item = document.querySelector('li')
+        item.style.color = 'red'
+
+        // captura todos os elementos <li> dentro de um vetor
+        let itens = document.querySelectorAll('li')
+
+        // trocar a cor do terceiro item
+        itens[2].style.color = 'blue'  
+
+
+
+        
+    </script>
+
+    
+</body>
+</html>
