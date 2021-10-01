@@ -9,11 +9,20 @@
 </head>
 <body>
     <h1>Document Object Model</h1>
-    <ol> 
-        <li>São Paulo</li>
-        <li>Minas Gerais</li>
-        <li>Rio de Janeiro</li>
-        <li>Espirito Santo</li>
+    <!--
+        o id é um atributo que identifica unicamente
+        um elemento dentro da pagina. Portanto, dois
+        elementos não podem ter o mesmo id.
+        O id pode ser adicionado a qualquer elemento.
+    -->
+
+
+
+    <ol id= 'estados'> 
+        <li id = "sp">São Paulo</li>
+        <li id = "mg">Minas Gerais</li>
+        <li id = "rj">Rio de Janeiro</li>
+        <li id = "es">Espirito Santo</li>
 
     </ol>
     <script>
@@ -36,9 +45,25 @@
         // trocar a cor do terceiro item
         itens[2].style.color = 'blue'  
 
+        // capturando um elemento pelo id - existem duas formas
 
+    let itemmg = document.getElementById('mg') // Forma classica
+    itemmg.style.color = 'green'
 
+            // Forma moderna - note que é necessario
+            // colocar o # antes do ID
+
+            let itemes= document.querySelector('#es')
+            itemes.style.fontWeight = ' bold' // colocar em negrito
         
+        let listaOrd = document.querySelector('#estados')
+        // Muda o marcador da lista para letras maiusculas
+        listaOrd.style.listStyleType = 'upper-alpha'
+      
+
+
+
+
     </script>
 
     
