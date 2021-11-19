@@ -5,35 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 15</title>
+    <body>
+<ul>
+    Estados do Sudeste e do Sul do Brasil
+</ul>
+<li>
+
+</li>
+    
     <script>
-         let Estado = []  // Vetor vazio
+         let estados = []  // Vetor vazio
 
 // 2 Estados no vetor
-Estado.push('São Paulo')
-Estado.push('Santa Catarina')
-Estado.push('Rio Grande do Sul')
-Estado.push('Rio de Janeiro')
-Estado.push('Paraná')
-Estado.push('Minas Gerais')
-Estado.push('Espírito Santo')
+estados.unshift('São Paulo')
+estados.unshift('Santa Catarina')
+estados.unshift('Rio Grande do Sul')
+estados.unshift('Rio de Janeiro')
+estados.unshift('Paraná')
+estados.unshift('Minas Gerais')
+estados.unshift('Espírito Santo')
 
 
-       
+const lista = document.querySelector('ul')
 
-for(let i = 0; i < Estado.length; i++) {
-    document.write(Estado[i] + '<br>')
+for(let estado of estados){
+    const item = document.createElement('li')
+    item.textContent = estado
+    lista.appendChild(item)
 }
-
-document.write('<hr>')
-
-
-
-
 
 
     </script>
 </head>
-<body>
+
     
 </body>
 </html>
